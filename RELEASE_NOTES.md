@@ -4,8 +4,8 @@ Windows 桌面可视化 ADB 工具箱，面向 Android 手工测试。
 
 ## 下载
 
-- ADBVisualTool Setup 0.1.0.exe：NSIS 安装包
-- ADBVisualTool 0.1.0.exe：便携版
+- ADBVisualTool-Setup-0.1.0.exe：NSIS 安装包
+- ADBVisualTool-Portable-0.1.0.exe：便携版
 
 ## 主要功能
 

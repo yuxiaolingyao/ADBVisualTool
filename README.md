@@ -93,8 +93,8 @@
 
 从 Releases 下载独立文件：
 
-    ADBVisualTool Setup 0.1.0.exe
-    ADBVisualTool 0.1.0.exe
+    ADBVisualTool-Setup-0.1.0.exe
+    ADBVisualTool-Portable-0.1.0.exe
 
 默认安装目录：
 
@@ -102,7 +102,7 @@
 
 便携版：
 
-    ADBVisualTool 0.1.0.exe
+    ADBVisualTool-Portable-0.1.0.exe
 
 便携版会自解压到临时目录，配置仍写入 %APPDATA%\ADB工具箱。
 
