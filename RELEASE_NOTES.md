@@ -1,60 +1,62 @@
 # ADBVisualTool v0.1.0
 
-Windows 桌面端可视化 ADB 工具，面向 Android 手工测试。
+Windows 桌面可视化 ADB 工具箱，面向 Android 手工测试。
 
 ## 下载
 
-- `ADBVisualTool Setup 0.1.0.exe`：NSIS 安装包
-- `ADBVisualTool 0.1.0.exe`：便携版
-- `ADBVisualTool-0.1.0-win64.zip`：以上两个文件 + 校验和 + 本说明
+- ADBVisualTool Setup 0.1.0.exe：NSIS 安装包
+- ADBVisualTool 0.1.0.exe：便携版
+- ADBVisualTool-0.1.0-win64.zip：安装包、便携版、说明和 SHA256
 
-## 功能
+## 主要功能
 
 - 设备识别、ADB 路径配置、Server 启停
-- 实时 logcat、级别/Tag/关键字/PID 过滤、崩溃日志、当前应用日志
-- 截图、scrcpy 录屏、独立窗口实时投屏（只看不控）
-- Monkey 一键测试，报告/logcat/崩溃文件自动保存
-- 应用列表、搜索、详情、安装/卸载/启停/清数据
-- 文件浏览、上传/下载、新建目录、重命名、删除
-- 终端、实时输出、命令历史、模板、强制终止、危险命令确认
-- 设置、保存目录、版本信息、整体检查
-- 系统托盘、右键菜单
-- 配置原子写入，保留上一份有效备份；临时文件自动清理
+- 实时 logcat、级别、Tag、关键字、PID 过滤
+- 当前应用日志、崩溃日志、日志保存、加载、导出
+- 日志断线与自动重连
+- 截图、scrcpy 录屏、独立窗口实时投屏
+- Monkey 测试，自动保存报告、logcat、崩溃文件
+- 应用列表、详情、安装、卸载、启停、清数据
+- 冷启动耗时统计
+- 文件浏览、上传、下载、新建、重命名、删除
+- 终端实时输出、历史、模板、强制终止、危险命令确认
+- 设备诊断、点击、滑动、按键、文本输入
+- 配置、保存目录、版本信息、整体检查
+- 系统托盘和右键菜单
 
 ## 安装
 
-### 安装包
+1. 将安装包放到英文路径。
+2. 双击安装。
+3. 默认安装到 %LOCALAPPDATA%\Programs\ADBVisualTool。
+4. 安装后从开始菜单或桌面快捷方式启动。
 
-1. 将安装包放在英文路径；
-2. 双击安装，默认安装到：
-   `%LOCALAPPDATA%\Programs\ADBVisualTool`
-3. 安装完成后从开始菜单/桌面快捷方式启动。
+便携版同样需要放在英文路径运行。
 
-### 便携版
+## 重要兼容性说明
 
-1. 将便携版放在英文路径；
-2. 直接运行；
-3. 不要放到中文目录下启动。
+Electron 45 打包版在中文目录下直接启动可能崩溃。发布包使用英文安装目录，请勿把安装包或便携版放到中文文件夹中运行。
 
-## 已知限制
+安装包没有代码签名，Windows SmartScreen 可能提示未知发布者。
 
-- 打包版基于 Electron 45，**不要从中文目录直接运行**，否则可能启动崩溃；安装包默认路径为英文。
-- 安装包未做代码签名，Windows SmartScreen 可能提示未知发布者。
-- ADB 需要本机单独安装 platform-tools，不随包内置。
-- 投屏是独立 scrcpy 窗口，只看不控。
-- 终端强制终止会结束当前 adb shell；设备端已拉起的长时间任务不保证继续。
+## 数据与配置
 
-## 配置与数据
+- 配置：%APPDATA%\ADB工具箱\config.json
+- 备份：%APPDATA%\ADB工具箱\config.json.bak
+- 日志：文档\ADB工具箱\logs
+- 截图：文档\ADB工具箱\screenshots
+- 录屏：文档\ADB工具箱\records
+- Monkey：文档\ADB工具箱\monkey
 
-- 配置：`%APPDATA%\ADB工具箱\config.json`
-- 备份：`%APPDATA%\ADB工具箱\config.json.bak`
-- 默认日志：`文档\ADB工具箱\logs`
-- 默认截图：`文档\ADB工具箱\screenshots`
-- 默认录屏：`文档\ADB工具箱\records`
-- 默认 Monkey：`文档\ADB工具箱\monkey`
+配置采用原子写入并保留上一份有效备份，正常重启不会重置。
 
-程序不联网、不上传数据。
+## 其他限制
+
+- 不内置 adb，需要本机 platform-tools。
+- 投屏是独立 scrcpy 窗口，不支持应用内嵌控制。
+- 终端强制终止会结束当前 adb shell。
+- 某些厂商 USB/ADB 链路不稳定时日志可能中断；程序会提示并重连，但无法修复 USB 问题。
 
 ## 校验
 
-见压缩包内 `SHA256SUMS.txt`。
+ZIP 内附 SHA256SUMS.txt。
