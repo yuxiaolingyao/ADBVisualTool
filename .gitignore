@@ -1,0 +1,6 @@
+node_modules/
+out/
+dist/
+*.log
+tests/.tmp-*/
+tests/e2e/*.png
