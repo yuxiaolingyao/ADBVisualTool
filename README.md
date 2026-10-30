@@ -91,9 +91,10 @@
 
 ## 安装
 
-从 Releases 下载：
+从 Releases 下载独立文件：
 
     ADBVisualTool Setup 0.1.0.exe
+    ADBVisualTool 0.1.0.exe
 
 默认安装目录：
 

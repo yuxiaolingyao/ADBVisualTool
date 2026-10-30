@@ -6,7 +6,6 @@ Windows 桌面可视化 ADB 工具箱，面向 Android 手工测试。
 
 - ADBVisualTool Setup 0.1.0.exe：NSIS 安装包
 - ADBVisualTool 0.1.0.exe：便携版
-- ADBVisualTool-0.1.0-win64.zip：安装包、便携版、说明和 SHA256
 
 ## 主要功能
 
@@ -59,4 +58,4 @@ Electron 45 打包版在中文目录下直接启动可能崩溃。发布包使�
 
 ## 校验
 
-ZIP 内附 SHA256SUMS.txt。
+发布资产旁会提供 SHA256；GitHub 也会显示资产 digest。
